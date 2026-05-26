@@ -48,7 +48,7 @@ designed to test and improve frontend development skills.
 
 # 🚀 Live Demo
 
-🔗  
+ 
 ## 🔗 Live Website
 
 https://deepthi1828.github.io/codesphere-challenge/
