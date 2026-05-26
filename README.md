@@ -71,18 +71,24 @@ codesphere-challenge/
 ├── script.js
 ├── questions.js
 └── README.md
+```
+
+---
 
 # 🎯 Key Functionalities
-⏳ 15-second timer for each question
-📈 Dynamic progress bar
-📝 Answer review after submission
-🎯 Real-time score tracking
-🔄 Retry functionality
-➡️ Automatic category continuation
-📱 Responsive layout for different screens
 
-👩‍💻 Author
+- ⏳ 15-second timer for each question
+- 📈 Dynamic progress bar
+- 📝 Answer review after submission
+- 🎯 Real-time score tracking
+- 🔄 Retry functionality
+- ➡️ Automatic category continuation
+- 📱 Responsive layout for different screens
 
-Deepthi 
+---
+
+# 👩‍💻 Author
+
+### Deepthi ✨
 
 Frontend Developer | Passionate Learner | UI Enthusiast
