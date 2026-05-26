@@ -1,0 +1,404 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>CodeSphere Challenge</title>
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- ========================================== -->
+    <!-- Welcome Screen -->
+    <!-- ========================================== -->
+
+    <div
+      class="welcome-screen"
+      id="welcome-screen"
+    >
+
+      <div class="welcome-card">
+
+        <h1>
+
+          CodeSphere Challenge
+
+        </h1>
+
+        <p class="subtitle">
+
+          Elevate your frontend expertise
+          through immersive coding
+          challenges and real-time
+          skill assessment.
+
+        </p>
+
+        <div class="platform-badge">
+
+          Frontend Assessment Platform
+
+        </div>
+
+        <!-- Name Input -->
+
+        <div class="input-group">
+
+          <label for="username">
+
+            Enter Your Name
+
+          </label>
+
+          <input
+            type="text"
+            id="username"
+            placeholder="Your Name"
+          >
+
+        </div>
+
+        <!-- Category Selection -->
+
+        <div class="category-section">
+
+          <h3>
+
+            Select Category
+
+          </h3>
+
+          <div class="category-buttons">
+
+            <button
+              class="category-btn active"
+              data-category="html"
+            >
+
+              HTML
+
+            </button>
+
+            <button
+              class="category-btn"
+              data-category="css"
+            >
+
+              CSS
+
+            </button>
+
+            <button
+              class="category-btn"
+              data-category="javascript"
+            >
+
+              JavaScript
+
+            </button>
+
+          </div>
+
+        </div>
+
+        <button id="start-btn">
+
+          Start Quiz
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- Quiz Screen -->
+    <!-- ========================================== -->
+
+    <div
+      class="quiz-screen hidden"
+      id="quiz-screen"
+    >
+
+      <div class="quiz-card">
+
+        <!-- Header -->
+
+        <div class="quiz-header">
+
+          <div class="question-count">
+
+            Question
+
+            <span id="current-question">
+
+              1
+
+            </span>
+
+            /
+
+            <span id="total-questions">
+
+              3
+
+            </span>
+
+          </div>
+
+          <div class="timer">
+
+            ⏳
+
+            <span id="time">
+
+              15
+
+            </span>s
+
+          </div>
+
+        </div>
+
+        <!-- Progress Bar -->
+
+        <div class="progress-container">
+
+          <div
+            class="progress-bar"
+            id="progress-bar"
+          >
+
+          </div>
+
+        </div>
+
+        <!-- Question -->
+
+        <h2
+          class="question"
+          id="question"
+        >
+
+          Question Text
+
+        </h2>
+
+        <!-- Options -->
+
+        <div
+          class="options-container"
+          id="options-container"
+        >
+
+        </div>
+
+        <!-- Navigation -->
+
+        <div class="navigation-buttons">
+
+          <button id="prev-btn">
+
+            Previous
+
+          </button>
+
+          <button id="next-btn">
+
+            Next Question
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ========================================== -->
+    <!-- Result Screen -->
+    <!-- ========================================== -->
+
+    <div
+      class="result-screen hidden"
+      id="result-screen"
+    >
+
+      <div class="result-card">
+
+        <h1>
+
+          Challenge Completed 🚀
+
+        </h1>
+
+        <p id="final-message">
+
+          Great Job!
+
+        </p>
+
+        <!-- Score -->
+
+        <div class="score-section">
+
+          <h2>
+
+            Your Score
+
+          </h2>
+
+          <p id="score-text">
+
+            0 / 3
+
+          </p>
+
+        </div>
+
+        <!-- Accuracy -->
+
+        <div class="accuracy-section">
+
+          <h2>
+
+            Accuracy
+
+          </h2>
+
+          <p id="accuracy-text">
+
+            0%
+
+          </p>
+
+        </div>
+
+        <!-- Category Scores -->
+
+        <div class="category-results">
+
+          <div class="category-result-box">
+
+            <h3>HTML</h3>
+
+            <p id="html-score">
+
+              0 / 3
+
+            </p>
+
+          </div>
+
+          <div class="category-result-box">
+
+            <h3>CSS</h3>
+
+            <p id="css-score">
+
+              0 / 6
+
+            </p>
+
+          </div>
+
+          <div class="category-result-box">
+
+            <h3>JavaScript</h3>
+
+            <p id="js-score">
+
+              0 / 6
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- Review -->
+
+        <div class="review-section">
+
+          <h3>
+
+            Answer Review
+
+          </h3>
+
+          <div id="review-container">
+
+          </div>
+
+        </div>
+
+        <!-- Buttons -->
+
+        <div class="result-buttons">
+
+          <button id="retry-btn">
+
+            Retry Challenge
+
+          </button>
+
+          <button id="continue-btn">
+
+            Continue To Next Category
+
+          </button>
+
+          <button id="home-btn">
+
+            Back To Home
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="questions.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

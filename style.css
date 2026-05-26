@@ -1,0 +1,775 @@
+/* ================================= */
+/* Global Styles */
+/* ================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  font-family: 'Poppins', sans-serif;
+
+  background:
+    radial-gradient(circle at top left,
+      rgba(0, 153, 255, 0.15),
+      transparent 25%),
+
+    radial-gradient(circle at bottom right,
+      rgba(140, 0, 255, 0.18),
+      transparent 25%),
+
+    #071120;
+
+  color: #ffffff;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  padding: 18px;
+
+  overflow-x: hidden;
+
+}
+
+/* ================================= */
+/* Main Container */
+/* ================================= */
+
+.container {
+
+  width: 100%;
+
+  max-width: 760px;
+
+}
+
+/* ================================= */
+/* Hidden */
+/* ================================= */
+
+.hidden {
+
+  display: none;
+
+}
+
+/* ================================= */
+/* Cards */
+/* ================================= */
+
+.welcome-card,
+.quiz-card,
+.result-card {
+
+  width: 100%;
+
+  background: linear-gradient(
+    145deg,
+    rgba(28, 42, 66, 0.96),
+    rgba(22, 34, 54, 0.96)
+  );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  padding: 32px;
+
+  border-radius: 28px;
+
+  backdrop-filter: blur(16px);
+
+  box-shadow:
+    0 0 30px rgba(0, 153, 255, 0.12),
+    0 0 60px rgba(140, 0, 255, 0.08);
+
+  animation: fadeIn 0.5s ease;
+
+}
+
+/* ================================= */
+/* Welcome Screen */
+/* ================================= */
+
+.welcome-card h1 {
+
+  font-size: 46px;
+
+  text-align: center;
+
+  margin-bottom: 16px;
+
+  font-weight: 700;
+
+}
+
+.subtitle {
+
+  text-align: center;
+
+  color: #b8c5db;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  margin-bottom: 24px;
+
+}
+
+/* ================================= */
+/* Platform Badge */
+/* ================================= */
+
+.platform-badge {
+
+  width: fit-content;
+
+  margin: 0 auto 34px;
+
+  padding: 10px 22px;
+
+  border-radius: 999px;
+
+  background: rgba(0,153,255,0.12);
+
+  border: 1px solid rgba(0,153,255,0.35);
+
+  color: #39bfff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+}
+
+/* ================================= */
+/* Input Group */
+/* ================================= */
+
+.input-group {
+
+  margin-bottom: 32px;
+
+}
+
+.input-group label {
+
+  display: block;
+
+  margin-bottom: 12px;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+}
+
+.input-group input {
+
+  width: 100%;
+
+  padding: 16px;
+
+  border-radius: 14px;
+
+  border: 1px solid transparent;
+
+  outline: none;
+
+  background: #041026;
+
+  color: white;
+
+  font-size: 15px;
+
+  transition: 0.3s ease;
+
+}
+
+.input-group input:focus {
+
+  border-color: #33bbff;
+
+  box-shadow:
+    0 0 15px rgba(51,187,255,0.2);
+
+}
+
+/* ================================= */
+/* Category Section */
+/* ================================= */
+
+.category-section h3 {
+
+  margin-bottom: 20px;
+
+  font-size: 17px;
+
+}
+
+.category-buttons {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+
+  margin-bottom: 30px;
+
+}
+
+.category-btn {
+
+  padding: 16px;
+
+  border-radius: 16px;
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  background: #041026;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+}
+
+.category-btn:hover {
+
+  transform: translateY(-2px);
+
+  border-color: #39bfff;
+
+}
+
+.category-btn.active {
+
+  background: linear-gradient(
+    135deg,
+    #38bdf8,
+    #0ea5e9
+  );
+
+  color: #071120;
+
+  font-weight: 700;
+
+}
+
+/* ================================= */
+/* All Buttons */
+/* ================================= */
+
+#start-btn,
+#prev-btn,
+#next-btn,
+#retry-btn,
+#continue-btn,
+#home-btn {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 16px;
+
+  font-size: 16px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+}
+
+/* ================================= */
+/* Quiz Buttons */
+/* ================================= */
+
+#start-btn,
+#prev-btn,
+#next-btn,
+#retry-btn {
+
+  background: linear-gradient(
+    135deg,
+    #38bdf8,
+    #0ea5e9
+  );
+
+  color: #071120;
+
+}
+
+#continue-btn {
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #7c3aed
+  );
+
+  color: white;
+
+}
+
+#home-btn {
+
+  background: #041026;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: white;
+
+}
+
+/* ================================= */
+/* Hover Effects */
+/* ================================= */
+
+#start-btn:hover,
+#prev-btn:hover,
+#next-btn:hover,
+#retry-btn:hover,
+#continue-btn:hover,
+#home-btn:hover {
+
+  transform: translateY(-2px);
+
+}
+
+#continue-btn:hover {
+
+  box-shadow:
+    0 0 18px rgba(139,92,246,0.35);
+
+}
+
+#home-btn:hover {
+
+  border-color: #38bdf8;
+
+}
+
+/* ================================= */
+/* Quiz Top */
+/* ================================= */
+
+.quiz-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 28px;
+
+}
+
+.category-flow {
+
+  color: #c3d3ea;
+
+  font-size: 14px;
+
+}
+
+.difficulty-badge {
+
+  padding: 10px 20px;
+
+  border-radius: 999px;
+
+  background: linear-gradient(
+    135deg,
+    #a855f7,
+    #7c3aed
+  );
+
+  font-weight: 700;
+
+}
+
+/* ================================= */
+/* Quiz Header */
+/* ================================= */
+
+.quiz-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 20px;
+
+}
+
+.timer {
+
+  background: #041026;
+
+  padding: 10px 16px;
+
+  border-radius: 12px;
+
+}
+
+/* ================================= */
+/* Progress Bar */
+/* ================================= */
+
+.progress-container {
+
+  width: 100%;
+
+  height: 12px;
+
+  background: #041026;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  margin-bottom: 28px;
+
+}
+
+.progress-bar {
+
+  width: 0%;
+
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #0ea5e9
+  );
+
+}
+
+/* ================================= */
+/* Question */
+/* ================================= */
+
+.question {
+
+  font-size: 22px;
+
+  line-height: 1.6;
+
+  margin-bottom: 24px;
+
+}
+
+/* ================================= */
+/* Options */
+/* ================================= */
+
+.options-container {
+
+  display: grid;
+
+  gap: 14px;
+
+  margin-bottom: 24px;
+
+}
+
+.option-btn {
+
+  padding: 16px;
+
+  border-radius: 16px;
+
+  border: 1px solid transparent;
+
+  background: #041026;
+
+  color: white;
+
+  text-align: left;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+
+}
+
+.option-btn:hover {
+
+  border-color: #38bdf8;
+
+}
+
+.option-btn.selected {
+
+  border-color: #38bdf8;
+
+  background: rgba(56,189,248,0.12);
+
+}
+
+.option-btn.correct {
+
+  background: #1f8b4c;
+
+}
+
+.option-btn.wrong {
+
+  background: #b42323;
+
+}
+
+/* ================================= */
+/* Navigation Buttons */
+/* ================================= */
+
+.navigation-buttons {
+
+  display: flex;
+
+  gap: 14px;
+
+}
+
+/* ================================= */
+/* Result Section */
+/* ================================= */
+
+.result-card {
+
+  text-align: center;
+
+}
+
+.result-card h1 {
+
+  margin-bottom: 18px;
+
+  font-size: 38px;
+
+}
+
+#final-message {
+
+  color: #38bdf8;
+
+  margin-bottom: 26px;
+
+}
+
+#score-text,
+#accuracy-text {
+
+  font-size: 30px;
+
+  font-weight: 700;
+
+}
+
+/* ================================= */
+/* Category Results */
+/* ================================= */
+
+.category-results {
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 16px;
+
+  margin: 30px 0;
+
+}
+
+.category-result-box {
+
+  background: #041026;
+
+  padding: 20px;
+
+  border-radius: 16px;
+
+}
+
+/* ================================= */
+/* Review Section */
+/* ================================= */
+
+.review-section {
+
+  margin-top: 34px;
+
+  text-align: left;
+
+}
+
+.review-section h3 {
+
+  margin-bottom: 22px;
+
+  text-align: center;
+
+}
+
+.review-box {
+
+  background: #041026;
+
+  border-left: 4px solid #38bdf8;
+
+  padding: 18px;
+
+  border-radius: 14px;
+
+  margin-bottom: 16px;
+
+}
+
+.review-box h4 {
+
+  margin-bottom: 10px;
+
+  font-size: 16px;
+
+}
+
+.review-box p {
+
+  margin-bottom: 6px;
+
+  color: #c7d4e7;
+
+}
+
+.review-box span {
+
+  color: white;
+
+  font-weight: 600;
+
+}
+
+/* ================================= */
+/* Result Buttons */
+/* ================================= */
+
+.result-buttons {
+
+  display: flex;
+
+  gap: 14px;
+
+  margin-top: 30px;
+
+  flex-wrap: wrap;
+
+}
+
+.result-buttons button {
+
+  flex: 1;
+
+  min-width: 200px;
+
+}
+
+/* ================================= */
+/* Animation */
+/* ================================= */
+
+@keyframes fadeIn {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(10px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+/* ================================= */
+/* Responsive */
+/* ================================= */
+
+@media (max-width: 768px) {
+
+  .welcome-card,
+  .quiz-card,
+  .result-card {
+
+    padding: 24px;
+
+  }
+
+  .welcome-card h1 {
+
+    font-size: 34px;
+
+  }
+
+  .question {
+
+    font-size: 20px;
+
+  }
+
+  .category-buttons,
+  .category-results {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .navigation-buttons,
+  .result-buttons {
+
+    flex-direction: column;
+
+  }
+
+  .quiz-top,
+  .quiz-header {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 14px;
+
+  }
+
+}
