@@ -89,6 +89,6 @@ codesphere-challenge/
 
 # 👩‍💻 Author
 
-### Deepthi ✨
+### Deepthi 
 
 Frontend Developer | Passionate Learner | UI Enthusiast
