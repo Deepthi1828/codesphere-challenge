@@ -46,14 +46,13 @@ designed to test and improve frontend development skills.
 
 ---
 
-# 🚀 Live Demo
+## 🚀 Project Links
 
- 
-## 🔗 Live Website
-
+🌐 Live Demo:  
 https://deepthi1828.github.io/codesphere-challenge/
 
----
+📂 GitHub Repository:  
+https://github.com/Deepthi1828/codesphere-challenge
 
 # 🛠️ Technologies Used
 
